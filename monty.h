@@ -2,6 +2,7 @@
 #define __MONTY__
 
 /*header files*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -24,9 +25,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -38,6 +39,8 @@ typedef struct stack_s
  * @head: This is the head of the linked list.
  * @tail: This is the tail of the linked list.
  *
+ * Decription: This holds our argument, line_number, operation, mode,
+ * head, and the end.
  */
 
 typedef struct command_s
@@ -62,8 +65,8 @@ typedef struct command_s
 
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(command_t *command);
+	char *opcode;
+	void (*f)(command_t *command);
 } instruction_t;
 
 /*prototypes*/

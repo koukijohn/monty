@@ -11,18 +11,18 @@ void the_executer(command_t *command)
 {
 	instruction_t functions[] = {
 		{"push", push},
-                {"pall", pall},
-                {"pint", pint},
-                {"pop", pop},
-		/*  {"swap", swap},
-		    {"add", add},*/
-                {"nop", nop},
+		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
+		/*{"swap", swap},
+		  {"add", add},*/
+		{"nop", nop},
 	};
 	int x = 0;
 
 	while (functions[x].opcode != NULL)
 	{
-		if(strcmp(command->operation, functions[x].opcode) == 0)
+		if (strcmp(command->operation, functions[x].opcode) == 0)
 		{
 			functions[x].f(command);
 			return;

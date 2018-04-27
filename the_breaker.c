@@ -43,7 +43,7 @@ int the_breaker(char *input, command_t *command)
 
 		}
 		size = strlen(argument);
-		while(size--)
+		while (size--)
 		{
 			if (size == 0 && argument[size] == '-')
 				break;

@@ -9,6 +9,7 @@
 
 void the_executer(command_t *command)
 {
+	int x;
 	instruction_t functions[] = {
 		{"push", push},
 		{"pall", pall},
@@ -17,16 +18,14 @@ void the_executer(command_t *command)
 /*		{"swap", swap},{"add", add},*/
 		{"nop", nop},
 	};
-	int x = 0;
 
-	while (functions[x].opcode != NULL)
+	for (x = 0; functions[x].opcode != NULL; x++)
 	{
 		if (strcmp(command->operation, functions[x].opcode) == 0)
 		{
 			functions[x].f(command);
 			return;
 		}
-		x++;
 	}
 	printf("L%d: unknown instruction %s\n", command->line_number,
 	       command->operation);

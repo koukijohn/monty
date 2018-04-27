@@ -14,8 +14,7 @@ void the_executer(command_t *command)
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
-		/*{"swap", swap},
-		  {"add", add},*/
+/*		{"swap", swap},{"add", add},*/
 		{"nop", nop},
 	};
 	int x = 0;

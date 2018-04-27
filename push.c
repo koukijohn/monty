@@ -13,12 +13,12 @@ void push(command_t *command)
 	stack_t **head;
 
 	new_node = NULL;
-	*head = command->head;
+	head = command->head;
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
-		printf("Error: malloc failed\n")
+		printf("Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 

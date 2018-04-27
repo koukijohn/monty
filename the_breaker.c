@@ -47,12 +47,18 @@ int the_breaker(char *input, command_t *command)
 		{
 			if (size == 0 && argument[size] == '-')
 				break;
-			if (argument[size] > 57 || argument[size] < 48)
+			if (argument[size] > 57)
 			{
 				printf("L%d: usage: push integer\n",
 				       line_number);
 				exit(EXIT_FAILURE);
 			}
+			if (argument[size] < 48)
+                        {
+                                printf("L%d: usage: push integer\n",
+                                       line_number);
+                                exit(EXIT_FAILURE);
+                        }
 		}
 		command->argument = atoi(argument);
 		command->operation = the_breaker;
